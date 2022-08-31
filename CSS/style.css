@@ -1,7 +1,81 @@
 body{
-	background-color: #121d6e;
+	background-color:#cbcdda;
+  max-wdth: 600px;
+  margn: 0 auto;
+
 }
 
 #sect{
-	margin-right: 900px;
+	margin-right: 150px;
+}
+
+#sect a.active {
+  color: ;
+  font-weight: bolder;
+  font-size: 22px;
+}
+
+#sect  a:hover:not(.active){
+  color: #e5a90f;
+  font-size: 18px;
+  font-weight: bold;
+  }
+
+.hire a{
+  color: floralwhite;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 22px;
+  border: 2px #e5a90f solid;
+  border-radius: 3px;
+  padding: 3px;
+  display: inline-block;
+}
+
+.carsl{
+	margin-bottom: 20px;
+}
+
+/*.carousel-item img{
+ min-height: 400px;
+
+}*/
+
+.carsl h1{
+	font-family:"oswald", Georgia;
+	color: #e5a90f;
+}
+
+.carsl h3{
+	font-family: "sofia", cursive;
+	color: #cbcdda;
+}
+
+.aboutt{
+ width: 85%;
+ border: o black solid;
+ border-radius: 6px;
+}
+
+.about-p p{
+text-align: justify;
+ text-justify: inter-word;
+}
+figure{
+  display: inline-block;
+  padding: 0 5px;
+}
+
+figcaption{
+  font-size: 14px;
+}
+
+.skills h3{
+  clear: both;
+}
+
+container{
+  float: left;
+  display: flex;
+  justify-content: space-evenly;
 }
