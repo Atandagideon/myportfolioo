@@ -1,12 +1,14 @@
 body{
-	background-color:#cbcdda;
-  max-wdth: 600px;
-  margn: 0 auto;
+  background-color:#cbcdda;
+  margin: 0;
+}
 
+*{
+  box-sizing: border-box;
 }
 
 #sect{
-	margin-right: 150px;
+  margin-right: 150px;
 }
 
 #sect a.active {
@@ -16,66 +18,244 @@ body{
 }
 
 #sect  a:hover:not(.active){
-  color: #e5a90f;
+  color: whitesmoke;
   font-size: 18px;
   font-weight: bold;
   }
 
-.hire a{
+  .header{
+    min-height: 350px;
+    color: whitesmoke;
+    position: relative;
+    text-align: center;
+  }
+
+  .header-content{
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .header-content img{
+    border: 0 solid black;
+    border-radius: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .ader-img{
+    text-align: center;
+  }
+/*
+  .header-content p, .header-content h3{
+    text-align: center;
+    padding: 5px;
+  }*/
+
+  .header-contacts{
+     position: absolute;
+     bottom: 0;
+     margin: 10px;
+     width: 90%;
+     font-size: 50px;
+  }
+
+  .contact{
+    padding: 0 0 0 3px;
+  }
+
+  .hire a{
   color: floralwhite;
   text-decoration: none;
   font-weight: bolder;
   font-size: 22px;
-  border: 2px #e5a90f solid;
+  border: 2px whitesmoke solid;
   border-radius: 3px;
   padding: 3px;
   display: inline-block;
 }
 
-.carsl{
-	margin-bottom: 20px;
+.typewriter{
+  display: flex;
+  justify-content: center;
+  positin: absolute;
+  right: 0;
 }
 
-/*.carousel-item img{
- min-height: 400px;
+.typewriter h3, .typewriter h4{
+  width: 50ch;
+  /*animation: typing 6s steps(35), blink .3s step-end infinite alternate;*/
+  white-space: wrap;
+  overflow: hidden;
+  border-right: 3px dashed black;
+  font-family: monospace;
+  font-size: 0.8em;
+  margin-top: 5px;
+  margin-left: 10PX;
+  letter-spacing: 0em;
+  text-align: center;
+  padding: 5px;
+  animation: typing 5s steps(150, end), blink-caret .35s step-end infinite;
+}
 
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  30% { border-color: #555 }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/*
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  80% { border-color: orange }
 }*/
 
-.carsl h1{
-	font-family:"oswald", Georgia;
-	color: #e5a90f;
+.skills{
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #555;
+  border-radius: 6px;
+  padding-bottom: 10px;
 }
 
-.carsl h3{
-	font-family: "sofia", cursive;
-	color: #cbcdda;
+.skills h2{
+  text-align: center;
 }
 
-.aboutt{
- width: 85%;
- border: o black solid;
- border-radius: 6px;
+.skil{
+  width: 90%;
+  background-color: grey;
+  margin-left: 15px;
+  margin-bottom: 15px;
 }
 
-.about-p p{
-text-align: justify;
- text-justify: inter-word;
-}
-figure{
-  display: inline-block;
-  padding: 0 5px;
+.skills h4{
+  margin-left: 15px;
+  margin-bottom: 0;
 }
 
-figcaption{
-  font-size: 14px;
+.skills h6{
+  margin-left: 15px;
+  display: inline;
 }
 
-.skills h3{
-  clear: both;
+.range{
+  text-align: right;
+  padding: 0 10px;
+  color: white;
 }
 
-container{
-  float: left;
-  display: flex;
-  justify-content: space-evenly;
+.editing{
+  width: 40%;
+  background-color: green;
+}
+
+.design{
+  width: 20%;
+  background-color: red;
+}
+
+.Frontend-web{
+  width: 70%;
+  background-color: blue;
+}
+
+.works{
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-body{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+
+figcaption h4, figcaption p{
+  margin: 0;
+  font-family: fantasy;
+  max-width: 190px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 600px ) {
+  .header{
+    height: 400px;
+  }
+
+  .header-content img{
+    float: left;
+    margin-top: 50px;
+    margin-left: 20px;
+    height: 150px;
+    width: 150px;
+  }
+
+  .header-content{
+    float: left;
+    margin: 30px 15px 0 40px;
+  }
+
+  .typewriter h3, .typewriter h4{
+    margin-top: 20px;
+    margin-right: 25px;
+    font-size: 1em;
+    text-align: right;
+  }
+}
+
+@media only screen and (min-width: 960px ) {
+  .header{
+    height: 500px;
+  }
+
+  .header-content{
+    width: 70%;
+    margin-top: 70px;
+    text-align: center;
+    margin-left: 120px;
+  }
+
+  .header-content img{
+    margin-top: 15px;
+    height: 200px;
+    width: 200px;
+  }
+
+  .contact{
+    padding:0 0 0 15px;
+  }
+
+  .typewriter h3, .typewriter h4{
+    font-size: 1.2em;
+    text-align: center;
+    padding-right: 20px;
+  }
+}
+
+
+@media only screen and (min-width: 1280px ) {
+  .header{
+    height: 600px;
+  }
+
+  .header-content{
+    margin-left: 200px;
+    margin-top: 120px;
+  }
+}
+
+@media only screen and (max-width: 320px ) {
+  .header-contacts{
+    margin: 5px;
+    font-size: 8px;
+  }
 }
