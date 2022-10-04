@@ -1,10 +1,15 @@
 body{
-  background-color:#cbcdda;
+  background-color: #e4efff;
   margin: 0;
+  font-family: 'Kanit', sans-serif;
 }
 
 *{
   box-sizing: border-box;
+}
+
+h2{
+  font-weight: bold;
 }
 
 #sect{
@@ -81,13 +86,13 @@ body{
   right: 0;
 }
 
-.typewriter h3, .typewriter h4{
+.typewriter h3{
   width: 50ch;
   /*animation: typing 6s steps(35), blink .3s step-end infinite alternate;*/
   white-space: wrap;
   overflow: hidden;
   border-right: 3px dashed black;
-  font-family: monospace;
+  font-family: 'Kanit', sans-serif;
   font-size: 0.8em;
   margin-top: 5px;
   margin-left: 10PX;
@@ -114,18 +119,19 @@ body{
 }*/
 
 .skills{
-  width: 85%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;
+  margin-top: 30px;
   margin-bottom: 15px;
-  border: 1px solid #555;
+  bordr: 1px solid #555;
   border-radius: 6px;
   padding-bottom: 10px;
 }
 
-.skills h2{
+.skills-works h2{
   text-align: center;
+  font-size: 22px;
 }
 
 .skil{
@@ -138,11 +144,13 @@ body{
 .skills h4{
   margin-left: 15px;
   margin-bottom: 0;
+  font-size: 18px;
 }
 
 .skills h6{
   margin-left: 15px;
   display: inline;
+  font-size: 14px;
 }
 
 .range{
@@ -151,40 +159,99 @@ body{
   color: white;
 }
 
-.editing{
+.skil .editing{
   width: 40%;
   background-color: green;
 }
 
-.design{
+.skil .design{
   width: 20%;
   background-color: red;
 }
 
-.Frontend-web{
+.skil .Frontend-web{
   width: 70%;
   background-color: blue;
 }
 
 .works{
-  width: 85%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
 
 .card-body{
+  flex-wrap: wrap;
+  padding: 0 4px;
+  text-align: center;
+}
+
+.card-column{
+  flex: 100%;
+  max-width: 100%;
+  padding: 0 4px;
+}
+
+figure{
+  padding: 0 5px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
 
-
 figcaption h4, figcaption p{
-  margin: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
   font-family: fantasy;
   max-width: 190px;
   text-align: center;
+  font-size: 0.8em;
 }
+
+.service{
+  width: 90%;
+  background-color: black;
+  text-align: center;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  font-siz: 14px;
+  padding-bottom: 15px;
+}
+
+.service h2{
+  color: whitesmoke;
+  padding-top: 20px;
+  font-size: 22px;
+}
+
+.service h3{
+  color: blue;
+  font-size: 20px;
+}
+
+.service .design, .service .web-dev, .service .editing{
+  width: 70%;
+  color: whitesmoke;
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+}
+
+/*.service .web-dev{
+  width: 85%;
+  background-color: grey;
+  text-align: center;
+}
+
+.service .editing{
+  width: 85%;
+  background-color: grey;
+  text-align: center;
+}*/
+
 
 @media only screen and (min-width: 600px ) {
   .header{
@@ -239,6 +306,51 @@ figcaption h4, figcaption p{
     text-align: center;
     padding-right: 20px;
   }
+
+  .skills h6{
+    
+  }
+
+  .skills-works{
+    width: 90%;
+    padding-left: 100px;
+  }
+
+  .skills{
+    width: 45%;
+    float: left;
+  }
+
+  .works{
+    width: 45%;
+    float: right;
+    margin-top: 30px;
+  }
+
+  .service{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-left: 100px;
+  }
+
+  .service h3{
+    text-align: center;
+  }
+
+  .service .design, .service .web-dev, .service .editing{
+    float: left;
+    width: 30%;
+    text-align: justify;
+    padding: 0 25px;
+  }
+
+  .clearfix{
+    content: "";
+    clear: both;
+    display: table;
+  }
 }
 
 
@@ -258,4 +370,14 @@ figcaption h4, figcaption p{
     margin: 5px;
     font-size: 8px;
   }
+}
+
+@media only screen and (min-width: 320px ) {
+  figure{
+  float: left;
+  padding: 0 5px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
 }
