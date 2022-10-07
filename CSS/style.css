@@ -10,6 +10,11 @@ body{
 
 h2{
   font-weight: bold;
+  color: #0C1524;
+}
+
+H4{
+  font-weight: bold;
 }
 
 #sect{
@@ -62,6 +67,7 @@ h2{
      margin: 10px;
      width: 90%;
      font-size: 50px;
+     padding-top: 10px;
   }
 
   .contact{
@@ -92,8 +98,8 @@ h2{
   white-space: wrap;
   overflow: hidden;
   border-right: 3px dashed black;
-  font-family: 'Kanit', sans-serif;
-  font-size: 0.8em;
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.9em;
   margin-top: 5px;
   margin-left: 10PX;
   letter-spacing: 0em;
@@ -102,9 +108,13 @@ h2{
   animation: typing 5s steps(150, end), blink-caret .35s step-end infinite;
 }
 
+.txt{
+  font-size: 13px;
+}
+
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  30% { border-color: #555 }
+  30% { border-color: #9a9a9a }
 }
 
 @keyframes typing {
@@ -151,6 +161,7 @@ h2{
   margin-left: 15px;
   display: inline;
   font-size: 14px;
+  color: #0D6EFD;
 }
 
 .range{
@@ -161,17 +172,17 @@ h2{
 
 .skil .editing{
   width: 40%;
-  background-color: green;
+  background-color: #47995F;
 }
 
 .skil .design{
   width: 20%;
-  background-color: red;
+  background-color: #FF4242;
 }
 
 .skil .Frontend-web{
   width: 70%;
-  background-color: blue;
+  background-color: #0D6EFD;
 }
 
 .works{
@@ -180,10 +191,17 @@ h2{
   margin-right: auto;
 }
 
+.card{
+  background-color: #f1f7ff;
+  box-shadow: 2px 3px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
 .card-body{
   flex-wrap: wrap;
   padding: 0 4px;
-  text-align: center;
+  text-algn: center;
+  margin-left: 10px;
+  background-color: whitesmoke;
 }
 
 .card-column{
@@ -192,10 +210,11 @@ h2{
   padding: 0 4px;
 }
 
-figure{
+.card-column figure{
   padding: 0 5px;
   margin-left: auto;
   margin-right: auto;
+  vertical-align: middle;
   text-align: center;
 }
 
@@ -211,11 +230,13 @@ figcaption h4, figcaption p{
 
 .service{
   width: 90%;
-  background-color: black;
+  max-width: 1000px;
+  background-color: #0C1524;
   text-align: center;
   margin-top: 25px;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 5px;
   font-siz: 14px;
   padding-bottom: 15px;
 }
@@ -227,7 +248,7 @@ figcaption h4, figcaption p{
 }
 
 .service h3{
-  color: blue;
+  color: #0D6EFD;
   font-size: 20px;
 }
 
@@ -252,6 +273,93 @@ figcaption h4, figcaption p{
   text-align: center;
 }*/
 
+.adress{
+  
+  
+  
+  
+}
+
+.message{
+  width: 90%;
+  background-color: #f1f7ff;
+  max-width: 650px;
+  border-radius: 4px;
+  margin: 30px auto;
+  padding: 0 20px; 
+  margin-bottom: 20px;
+  box-shadow: 2px 3px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.message h3{
+  text-align: center;
+  font-weight: bold;
+}
+
+.message h6{
+  text-align: center;
+  color: #0D6EFD;
+}
+
+.message label{
+  font-weight: bold;
+  text-align: left;
+  color: #555;
+}
+
+input, textarea{
+  width: 100%;
+  margin-bottom: 15px;
+  border: 2px solid #e4efff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #555;
+}
+
+input[type=submit]{
+  width: 70px;
+  background-color: #0d6efd;
+  color: whitesmoke;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: left;
+  text-align: center;
+  border: 1px solid #0d6efd;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+input[type=submit]:hover{
+  
+}
+
+xc{
+  width: 75%;
+  border-radius: 5px;
+}
+
+.address .contact{
+  margin-top: 20px;
+  text-align: center;
+}
+
+.send-message{
+  margin-top: 40px;
+}
+
+.send-message a{
+  text-decoration: none;
+  text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.19);
+  color: #0d6efd;
+  font-size: 14px;
+  padding: 8px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.send-message:hover{
+  font-size: 18px;
+  color: green;
+}
 
 @media only screen and (min-width: 600px ) {
   .header{
@@ -276,6 +384,10 @@ figcaption h4, figcaption p{
     margin-right: 25px;
     font-size: 1em;
     text-align: right;
+  }
+
+  input, textarea{
+    width: 75%;
   }
 }
 
@@ -328,7 +440,7 @@ figcaption h4, figcaption p{
   }
 
   .service{
-    width: 100%;
+    width: 95%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
