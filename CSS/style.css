@@ -2,6 +2,7 @@ body{
   background-color: #e4efff;
   margin: 0;
   font-family: 'Kanit', sans-serif;
+  font-size: 14;
 }
 
 *{
@@ -367,12 +368,62 @@ xc{
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
+  color: #555;
 }
 
 .quote-container button{
   border: 1px solid #0d6efd;
   border-radius: 4px;
   padding: 5px;
+}
+
+.quote-container h3{
+  font-weight: bold;
+  font-size: 16px;
+  color: #555;
+}
+
+#myBtn{
+  display: none;
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #0d6efd;
+  color: whitesmoke;
+  cursor: pointer;
+  padding: 15px;
+  border: 1px solid #e4efff;
+  border-radius: 15px;
+  font-size: 16px;
+}
+
+#myBtn:hover{
+  background-color: #555;
+}
+
+footer{
+        background-color: #0d6efd;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        margin-bottom: -20px;
+        padding: 10px 0;
+}
+
+footer h5{
+  font-weight: bold;
+  padding: 0;
+  margin-bottom: -3px;
+}
+
+footer p{
+  margin-bottom: 0;
+  margin-top: 15px;
+  font-size: 14px;
+  padding: 0 10px;
 }
 
 @media only screen and (min-width: 600px ) {
@@ -492,6 +543,10 @@ xc{
     margin-left: 60px;
   }
 
+  .message label{
+    text-align: left;
+  }
+
   .quote-container{
     max-width: 350px;
     min-width: 40%;
@@ -516,6 +571,10 @@ xc{
     text-align: center;
     margin-right: auto;
     margin-left: auto;
+  }
+
+  .message label{
+    text-align: left;
   }
 }
 
