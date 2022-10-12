@@ -3,6 +3,7 @@ body{
   margin: 0;
   font-family: 'Kanit', sans-serif;
   font-size: 14;
+  letter-spacing: 0.8px;
 }
 
 *{
@@ -53,9 +54,6 @@ H4{
     margin-top: 10px;
   }
 
-  .ader-img{
-    text-align: center;
-  }
 /*
   .header-content p, .header-content h3{
     text-align: center;
@@ -172,17 +170,17 @@ H4{
 }
 
 .skil .editing{
-  width: 40%;
+  width: 80%;
   background-color: #47995F;
 }
 
 .skil .design{
-  width: 20%;
+  width: 90%;
   background-color: #FF4242;
 }
 
 .skil .Frontend-web{
-  width: 70%;
+  width: 75%;
   background-color: #0D6EFD;
 }
 
@@ -252,6 +250,8 @@ figcaption h4, figcaption p{
 .service h3{
   color: #0D6EFD;
   font-size: 20px;
+  font-weight: 500;
+  margin-top: 20px;
 }
 
 .service .design, .service .web-dev, .service .editing{
@@ -261,6 +261,23 @@ figcaption h4, figcaption p{
   margin-left: auto;
   margin-right: auto;
   font-size: 14px;
+}
+
+.service svg{
+  float: left;
+}
+
+.service a{
+  width: 70px;
+  background-color: #0d6efd;
+  text-decoration: none;
+  color: whitesmoke;
+  font-weight: bold;
+  padding: 6px;
+  text-align: center;
+  border: 1px solid #0d6efd;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
 }
 
 /*.service .web-dev{
@@ -343,7 +360,7 @@ xc{
 
 .send-message a{
   text-decoration: none;
-  text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.19);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.19);
   color: #0d6efd;
   font-size: 14px;
   padding: 8px;
@@ -433,7 +450,7 @@ footer p{
 
   .header-content img{
     float: left;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-left: 20px;
     height: 150px;
     width: 150px;
@@ -521,7 +538,7 @@ footer p{
     float: left;
     width: 30%;
     text-align: justify;
-    padding: 0 25px;
+    padding: 0 15px;
   }
 
   .clearfix{
@@ -532,7 +549,7 @@ footer p{
 
   .message-quote{
     width: 95%;
-    text-align: center;
+    text-align: left;
   }
 
   .message{
@@ -541,10 +558,6 @@ footer p{
     width: 40%;
     float: left;
     margin-left: 60px;
-  }
-
-  .message label{
-    text-align: left;
   }
 
   .quote-container{
@@ -568,13 +581,9 @@ footer p{
   }
   .message-quote{
     max-width: 1000px;
-    text-align: center;
+    text-align: left;
     margin-right: auto;
     margin-left: auto;
-  }
-
-  .message label{
-    text-align: left;
   }
 }
 
