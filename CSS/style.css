@@ -2,7 +2,7 @@ body{
   background-color: #e4efff;
   margin: 0;
   font-family: 'Kanit', sans-serif;
-  font-size: 14;
+  font-size: 14px;
   letter-spacing: 0.8px;
 }
 
@@ -255,7 +255,7 @@ figcaption h4, figcaption p{
 }
 
 .service .design, .service .web-dev, .service .editing{
-  width: 70%;
+  width: 80%;
   color: #555;
   text-align: justify;
   margin-left: auto;
