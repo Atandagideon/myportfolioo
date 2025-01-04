@@ -436,11 +436,11 @@
 				</form>
 			</div>
 
-			<!-- <div class="quote-container text-center">
+			<div class="quote-container text-center">
 				<h3>Random Quote Generator</h3>
 				 <p id="quote-text"></p>
   				 <button id="getQuote" class="btn">New Quote</button>
-			</div> -->
+			</div> 
 		</div>
 		<button onclick="topFunction()" id="myBtn" title="Go to top"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-top" width="25" height="25" viewBox="0 0 24 24" stroke-width="1.5" stroke="whitesmoke" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -487,21 +487,31 @@
 		</footer>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 		<script type="text/javascript">$(function() {
-  var quote = $('#quote-text');
-  getQuote(quote);
+  
+$(document).ready(function () {
+    const apiURL = "https://type.fit/api/quotes";
 
-  $('#getQuote').click(function(event) {
-    event.preventDefault();
-    getQuote(quote);
-  })
-});
+    function getQuote() {
+        $.getJSON(apiURL, function (data) {
+            const randomIndex = Math.floor(Math.random() * data.length);
+            const quote = data[randomIndex];
 
-function getQuote(quote) {
-  var url: 'https://quotes21.p.rapidapi.com/quote'/?method=getQuote&lang=en&format=jsonp&jsonp=?"
+            $("#quote-text").text(`"${quote.text}"`);
+            $("#quote-author").text(quote.author ? `- ${quote.author}` : "- Unknown");
+        }).fail(function () {
+            $("#quote-text").text("Failed to fetch quote. Please try again.");
+            $("#quote-author").text("");
+        });
+    }
 
-  $.getJSON(url, function(data) {
-      quote.html(data.quoteText);
-  });
+    // Load a quote when the page loads
+    getRandomQuote();
+
+    // Generate a new quote on button click
+    $("#new-quote").click(function () {
+        getRandomQuote();
+    });
+});	
 }</script>
 <script>
 	var mybutton = document.getElementById("myBtn");
