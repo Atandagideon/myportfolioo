@@ -12,6 +12,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&family=Rubik:wght@350&display=swap" rel="stylesheet"> 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 		<script src="https://kit.fontawesome.com/586b48c622.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="./CSS/quotestyl.css">
 		<link rel="stylesheet" href="./CSS/queries.css">
 		<link rel="stylesheet" href="./CSS/style.css">
 		<link rel="icon" href="./img/favicon.jpeg">
@@ -439,8 +440,9 @@
 			<div class="quote-container text-center">
 				<h3>Random Quote Generator</h3>
 				 <p id="quote-text"></p>
-  				 <button id="getQuote" class="btn">New Quote</button>
-			</div> 
+				 <p id="quote-author"></p>
+  				 <button id="get-Quote" class="btn">New Quote</button>
+			</div>
 		</div>
 		<button onclick="topFunction()" id="myBtn" title="Go to top"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-top" width="25" height="25" viewBox="0 0 24 24" stroke-width="1.5" stroke="whitesmoke" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -486,60 +488,73 @@
 			<p>Copyright © 2022 Emperor. All rights reserved.</p>
 		</footer>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-		<script type="text/javascript">$(function() {
-  
-$(document).ready(function () {
-    const apiURL = "https://type.fit/api/quotes";
-
-    function getQuote() {
-        $.getJSON(apiURL, function (data) {
-            const randomIndex = Math.floor(Math.random() * data.length);
-            const quote = data[randomIndex];
-
-            $("#quote-text").text(`"${quote.text}"`);
-            $("#quote-author").text(quote.author ? `- ${quote.author}` : "- Unknown");
-        }).fail(function () {
-            $("#quote-text").text("Failed to fetch quote. Please try again.");
-            $("#quote-author").text("");
-        });
-    }
-
-    // Load a quote when the page loads
-    getRandomQuote();
-
-    // Generate a new quote on button click
-    $("#new-quote").click(function () {
-        getRandomQuote();
-    });
-});	
-}</script>
-<script>
-	var mybutton = document.getElementById("myBtn");
-
-	window.onscroll = function() {scrollfunction()}
+		<script type="text/javascript">document.addEventListener('DOMContentLoaded', () => {
+			const quoteTextElement = document.getElementById('quote-text');
+			const quoteAuthorElement = document.getElementById('quote-author');
+			const getQuote = document.getElementById('get-Quote');
 		
-	function scrollfunction()	{
-		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-			mybutton.style.display = "block";
-		} else {
-			mybutton.style.display = "none";
-		}
-	}
-
-	function topFunction() {
-		document.body.scrollTop = 0;
-		document.documentElement.scrollTop = 0;
-	}
-</script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5BTQ9F0Y9M"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-5BTQ9F0Y9M');
+			const quotes = [
+				{
+					text: "The only way to do great work is to love what you do.",
+					author: "Steve Jobs"
+				},
+				{
+					text: "Strive not to be a success, but rather to be of value.",
+					author: "Albert Einstein"
+				},
+				{
+					text: "The mind is everything. What you think you become.",
+					author: "Buddha"
+				},
+				{
+					text: "Your time is limited, so don't waste it living someone else's life.",
+					author: "Steve Jobs"
+				},
+				{
+					text: "The purpose of our lives is to be happy.",
+					author: "Dalai Lama"
+				},
+				{
+					text: "Get busy living or get busy dying.",
+					author: "Stephen King"
+				},
+				{
+					text: "You only live once, but if you do it right, once is enough.",
+					author: "Mae West"
+				},
+				{
+					text: "Many of life's failures are people who did not realize how close they were to success when they gave up.",
+					author: "Thomas A. Edison"
+				},
+				{
+					text: "If you want to live a happy life, tie it to a goal, not to people or things.",
+					author: "Albert Einstein"
+				},
+				{
+					text: "Never let the fear of striking out keep you from playing the game.",
+					author: "Babe Ruth"
+				}
+				// Add more quotes here!
+				// { text: "Another quote.", author: "Author Name" }
+			];
+		
+			function getRandomQuote() {
+				const randomIndex = Math.floor(Math.random() * quotes.length);
+				return quotes[randomIndex];
+			}
+		
+			function displayQuote() {
+				const randomQuote = getRandomQuote();
+				quoteTextElement.textContent = `"${randomQuote.text}"`;
+				quoteAuthorElement.textContent = `- ${randomQuote.author || "Unknown"}`;
+			}
+		
+			// Display a quote on initial load
+			displayQuote();
+		
+			// Event listener for the button
+			getQuote.addEventListener('click', displayQuote);
+		});
 </script>
 
 </body>
